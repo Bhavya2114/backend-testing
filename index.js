@@ -11,13 +11,14 @@ app.get("/", (req, res) => {
 });
 
 app.post("/students", (req, res) => {
-  const { name, dsage } = req.body;
+  const { name, age } = req.body;
 
   if (!name || !age) {
     return res.status(400).json({
       error: "Name and age are required"
     });
   }
+
   students.push({ name, age });
 
   res.status(201).json({
