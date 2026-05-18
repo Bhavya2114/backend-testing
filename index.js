@@ -15,7 +15,7 @@ app.post("/students", (req, res) => {
 
   if (!name || !age) {
     return res.status(400).json({
-      error: "Name and age are required"
+      error: "Name and age are required!"
     });
   }
 
